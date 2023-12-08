@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="NHibernate.NetCore" Version="7.0.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dyno.Platform.Payment.Business\Dyno.Platform.Payment.Business.csproj" />
+    <ProjectReference Include="..\Dyno.Platform.Payment.DTO\Dyno.Platform.Payment.DTO.csproj" />
+    <ProjectReference Include="..\Dyno.Platform.Payment.Nhibernate\Dyno.Platform.Payment.Nhibernate.csproj" />
+  </ItemGroup>
+
+</Project>

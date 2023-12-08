@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CoreSharp.NHibernate.PostgreSQL" Version="0.7.1" />
+    <PackageReference Include="FluentMigrator" Version="3.3.2" />
+    <PackageReference Include="FluentNHibernate" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="NHibernate" Version="5.4.2" />
+    <PackageReference Include="NHibernate.AspNetCore.Identity" Version="7.0.1" />
+    <PackageReference Include="Npgsql" Version="7.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dyno.Platform.ReferentialData.DTO\Dyno.Platform.ReferentialData.DTO.csproj" />
+    <ProjectReference Include="..\Dyno.Platform.ReferntialData.DataModel\Dyno.Platform.ReferntialData.DataModel.csproj" />
+  </ItemGroup>
+
+</Project>
