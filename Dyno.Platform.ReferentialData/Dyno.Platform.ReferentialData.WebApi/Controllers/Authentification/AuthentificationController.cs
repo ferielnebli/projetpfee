@@ -5,6 +5,7 @@ using Platform.Shared.Enum;
 using Platform.Shared.Result;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Dyno.Platform.ReferentialData.WebApi.Controllers.Authentification
 {
@@ -89,6 +90,11 @@ namespace Dyno.Platform.ReferentialData.WebApi.Controllers.Authentification
             return Ok(result);
 
         }
+
+        
+       
+
+
 
         [HttpPost]
         [Route("ResetPassword")]

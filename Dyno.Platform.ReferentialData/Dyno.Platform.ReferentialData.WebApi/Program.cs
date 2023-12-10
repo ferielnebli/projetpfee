@@ -117,7 +117,27 @@ using (var scope = builder.Services.BuildServiceProvider().CreateScope())
 #region Authentification
 //builder.Services.ConfigureJWT(builder.Configuration);
 builder.Services.AddSwaggerDoc();
-builder.Services.AddAuthentication().AddJwtBearer();
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+    .AddJwtBearer(options =>
+
+    {
+        options.SaveToken= true;
+        options.RequireHttpsMetadata = true;
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidIssuer = JWTVariable.Issuer,
+            ValidAudience = JWTVariable.Audience,
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JWTVariable.key))
+        };
+    });
 #endregion
 
 // Add services to the container.

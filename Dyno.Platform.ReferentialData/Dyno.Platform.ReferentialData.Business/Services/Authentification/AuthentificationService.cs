@@ -289,10 +289,7 @@ namespace Dyno.Platform.ReferentialData.Business.Services.Authentification
             {
                 new Claim("userId", userEntity.Id)
             };
-            //foreach (var role in userEntity.Roles)
-            //{
-            //    claims.Add(new Claim(ClaimTypes.Role, role.Id));
-            //}
+            
 
             var token = new JwtSecurityToken(
                 issuer: JWTVariable.Issuer,
